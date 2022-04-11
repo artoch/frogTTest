@@ -23,11 +23,13 @@ bash
 
 ### 4. Configurar las variables de ambiente al lado de donde se selecciona los dispositivos configurar lo siguiente:
 
-  BASE_URL is the base url for example hhtps//asdads.com. 
-  BACK_V is the backend version  
-  COMPANY_UID is the company uid. 
-  TOKEN -> for the token. 
-  CONTENT_TYPE -> the content type  
+  # BASE_URL es el url base por ejemplo hhtps//asdads.com/
+  # BACK_V iversion de api vX/
+  # COMPANY_UID company UID 
+  # TOKEN -> para el token
+  # CONTENT_TYPE -> content type
+  
+  # Otra forma de hacer es entrando al archivo de Constants dentro de la carpeta Resources y modificar las variables del mismo nombre de arriba
   
 ## Descripción del proyecto:
 
