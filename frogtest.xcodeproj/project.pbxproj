@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		25741B512803DDC500535686 /* ListStoreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25741B502803DDC500535686 /* ListStoreViewModel.swift */; };
 		257AC65828007CA40043E503 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257AC65728007CA40043E503 /* AppDelegate.swift */; };
 		257AC65A28007CA40043E503 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257AC65928007CA40043E503 /* SceneDelegate.swift */; };
 		257AC66128007CA50043E503 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 257AC66028007CA50043E503 /* Assets.xcassets */; };
@@ -51,7 +52,6 @@
 		257AC6F82801F9820043E503 /* ManufactureHeaders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257AC6F72801F9820043E503 /* ManufactureHeaders.swift */; };
 		257AC700280214F10043E503 /* StoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257AC6FE280214F10043E503 /* StoreViewController.swift */; };
 		257AC701280214F10043E503 /* StoreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 257AC6FF280214F10043E503 /* StoreViewController.xib */; };
-		257AC703280215560043E503 /* ListStoreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257AC702280215560043E503 /* ListStoreViewModel.swift */; };
 		257AC70628025FD50043E503 /* StoreTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 257AC70428025FD50043E503 /* StoreTableCell.swift */; };
 		257AC70728025FD50043E503 /* StoreTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 257AC70528025FD50043E503 /* StoreTableCell.xib */; };
 		25A5C3DE28039B26009A8812 /* StoreViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25A5C3DD28039B26009A8812 /* StoreViewModelTest.swift */; };
@@ -83,6 +83,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		25741B502803DDC500535686 /* ListStoreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListStoreViewModel.swift; sourceTree = "<group>"; };
 		257AC65428007CA40043E503 /* frogtest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = frogtest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		257AC65728007CA40043E503 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		257AC65928007CA40043E503 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -131,7 +132,6 @@
 		257AC6F72801F9820043E503 /* ManufactureHeaders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManufactureHeaders.swift; sourceTree = "<group>"; };
 		257AC6FE280214F10043E503 /* StoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreViewController.swift; sourceTree = "<group>"; };
 		257AC6FF280214F10043E503 /* StoreViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoreViewController.xib; sourceTree = "<group>"; };
-		257AC702280215560043E503 /* ListStoreViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListStoreViewModel.swift; path = ../../../../.Trash/ListStoreViewModel.swift; sourceTree = "<group>"; };
 		257AC70428025FD50043E503 /* StoreTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreTableCell.swift; sourceTree = "<group>"; };
 		257AC70528025FD50043E503 /* StoreTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StoreTableCell.xib; sourceTree = "<group>"; };
 		25A5C3DD28039B26009A8812 /* StoreViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreViewModelTest.swift; sourceTree = "<group>"; };
@@ -508,9 +508,9 @@
 			children = (
 				257AC6E8280121600043E503 /* Extensions */,
 				257AC6E128011E370043E503 /* CellStore */,
-				257AC702280215560043E503 /* ListStoreViewModel.swift */,
 				257AC6FE280214F10043E503 /* StoreViewController.swift */,
 				257AC6FF280214F10043E503 /* StoreViewController.xib */,
+				25741B502803DDC500535686 /* ListStoreViewModel.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -860,6 +860,7 @@
 				257AC65A28007CA40043E503 /* SceneDelegate.swift in Sources */,
 				257AC6B52800D48E0043E503 /* FetchData.swift in Sources */,
 				257AC6BA2800E35F0043E503 /* BaseResponse.swift in Sources */,
+				25741B512803DDC500535686 /* ListStoreViewModel.swift in Sources */,
 				257AC6982800B21E0043E503 /* Response.swift in Sources */,
 				257AC70628025FD50043E503 /* StoreTableCell.swift in Sources */,
 				257AC6B82800D4E90043E503 /* DataRepository.swift in Sources */,
@@ -882,7 +883,6 @@
 				257AC6D02800EC750043E503 /* UIViewControllerExtension.swift in Sources */,
 				257AC6AE2800D2D70043E503 /* Attributes.swift in Sources */,
 				257AC6CC2800EBEA0043E503 /* API.swift in Sources */,
-				257AC703280215560043E503 /* ListStoreViewModel.swift in Sources */,
 				257AC6AA2800D21C0043E503 /* Datum.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

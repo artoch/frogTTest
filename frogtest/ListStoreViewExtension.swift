@@ -28,7 +28,7 @@ extension StoreViewController : UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: StoreTableCell.self)) as? StoreTableCell {
             let pos = indexPath.row
-            cell.setupCell(name: viewModel!.getStoreTitle(index: pos), address: viewModel!.storeAddress(index: pos))
+            cell.setupCell(name: viewModel!.getStoreTitle(index: pos), address: viewModel!.getStoreAddress(index: pos))
             return cell
         }
         return UITableViewCell()
