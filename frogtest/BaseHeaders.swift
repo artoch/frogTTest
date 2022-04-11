@@ -6,3 +6,8 @@
 //
 
 import Foundation
+import Alamofire
+
+protocol BaseHeaders {
+    var headers: HTTPHeaders {get set}
+}

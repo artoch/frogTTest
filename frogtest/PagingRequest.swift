@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+protocol PagingRequest: Codable {
+    
+    var page: Int { get set}
+    var pageSize: Int { get set}
+    
+
+}

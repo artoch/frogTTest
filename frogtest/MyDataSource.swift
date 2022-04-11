@@ -6,3 +6,12 @@
 //
 
 import Foundation
+import Alamofire
+
+///This will be our generic data source
+///each data source for data should implement this data source and fulfill its functions implementation
+protocol MyDataSource {
+ 
+    func getData(url: String, headers: BaseHeaders, completion: @escaping (_ result: BaseResponse?, _ error: ErrorResponse?) -> Void)
+    
+}

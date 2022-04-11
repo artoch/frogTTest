@@ -6,3 +6,17 @@
 //
 
 import Foundation
+@testable import frogtest
+// this will be our abstract class for defining car type repository
+protocol DataRepositoryTest {
+    
+    //we should add the implementation for this
+    //we don't know where it's going to fetch data local or remote
+    //for now we only care for remote
+    func getData(nextUrl: String, completion: @escaping (_ result: Response?, _ error: ErrorResponse?) -> Void)
+    
+    func getDataWithErrorToken(nextUrl: String, completion: @escaping (_ result: Response?, _ error: ErrorResponse?) -> Void)
+    
+    func getDataWithErrorCompanyUid(nextUrl: String, completion: @escaping (_ result: Response?, _ error: ErrorResponse?) -> Void)
+    
+}

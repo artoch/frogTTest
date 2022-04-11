@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ManufacturerArgs: PagingRequest, Codable {
+struct ManufacturerArgs: PagingRequest {
     
     var page, pageSize: Int
 }

@@ -6,31 +6,74 @@
 //
 
 import XCTest
+import Combine
 @testable import frogtest
 
 class frogtestTests: XCTestCase {
 
+    var storeViewModel: StoreViewModelTest?
+    var observers: [AnyCancellable]?
+    
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        storeViewModel = StoreViewModelTest()
+        observers = []
     }
 
     override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        storeViewModel = nil
+        observers = nil
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
+    func test_get_data_from_api() throws {
+        let exp = expectation(description: "Wait for result get correct data")
+        storeViewModel?.fetchData()?.receive(on: DispatchQueue.main).sink( receiveCompletion: {completion in
+            switch completion {
+            case .finished:
+                print("Finished calling")
+            case .failure(let error):
+                print("Error calling \(error)")
+            }
+        }, receiveValue: { response in
+            XCTAssertNotNil(response)
+            exp.fulfill()
+        }).store(in: &observers!)
+        waitForExpectations(timeout: 5)
     }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    
+    func test_get_error_from_token() throws {
+        let exp = expectation(description: "Wait for result error token")
+        storeViewModel?.fetchDataErrorToken()?.receive(on: DispatchQueue.main).sink( receiveCompletion: {completion in
+            switch completion {
+            case .finished:
+                print("Finished calling")
+            case .failure(let error):
+                XCTAssertNotNil(error)
+                print("Error calling \(error)")
+                exp.fulfill()
+            }
+        }, receiveValue: { response in
+            XCTAssertNil(response)
+            exp.fulfill()
+        }).store(in: &observers!)
+        waitForExpectations(timeout: 5)
+    }
+    
+    func test_get_error_from_company_uid() throws {
+        let exp = expectation(description: "Wait for result error company uid")
+        storeViewModel?.fetchDataErrorCompanyUID()?.receive(on: DispatchQueue.main).sink( receiveCompletion: {completion in
+            switch completion {
+            case .finished:
+                print("Finished calling")
+            case .failure(let error):
+                XCTAssertNotNil(error)
+                print("Error calling \(error)")
+                exp.fulfill()
+            }
+        }, receiveValue: { response in
+            XCTAssertNil(response)
+            exp.fulfill()
+        }).store(in: &observers!)
+        waitForExpectations(timeout: 5)
     }
 
 }

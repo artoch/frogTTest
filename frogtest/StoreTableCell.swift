@@ -9,15 +9,21 @@ import UIKit
 
 class StoreTableCell: UITableViewCell {
 
-    override func awakeFromNib() {
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var addressLabel: UILabel!
+    
+    override class func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    func setupCell(name: String, address: String){
+        titleLabel.text = name
+        addressLabel.text = address
+    }
+    
+    func setupCell(data: Attributes) {
+        titleLabel.text = "\(data.name) | \(data.code)"
+        addressLabel.text = data.fullAddress
     }
     
 }
